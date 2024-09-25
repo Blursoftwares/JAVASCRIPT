@@ -24,7 +24,7 @@ Error handling is an essential aspect of developing robust applications in JavaS
 
 In JavaScript, errors can occur during the execution of your code. Proper error handling helps to prevent your application from crashing and allows for smoother user experiences. This document will explore how to effectively manage errors in your JavaScript code.
 
-![Error Handling Flowchart](https://venngage.com/templates/diagrams/simple-error-flow-chart-2e61950e-29f9-412f-b4c3-43b91a3756b2) <!-- Replace with actual image URL -->
+![Error Handling Flowchart](https://miro.medium.com/v2/resize:fit:640/format:webp/1*bVI-OLQU3OzZDuvLfYxJLA.png) <!-- Replace with actual image URL -->
 
 ## Types of Errors
 
