@@ -24,7 +24,7 @@ Application Programming Interfaces (APIs) allow different software applications 
 
 An API (Application Programming Interface) is a set of rules that allows one piece of software or hardware to interact with another. In the context of web development, APIs allow for the interaction between a web client (like a browser) and a web server.
 
-![API Communication Diagram](https://www.lucidchart.com/pages/templates/api-flowchart-example?anonId=0.13c7112c19228d7effa&sessionDate=2024-09-25T11%3A01%3A44.580Z&sessionId=0.002c9abf19228d7f004)
+![API Communication Diagram](https://www.multiplayer.app/static/4f087c1c4191df8be06c6749a235ac83/aaea6/example-system-architecture-diagram-create-account.webp)
 
 ## Types of APIs
 
