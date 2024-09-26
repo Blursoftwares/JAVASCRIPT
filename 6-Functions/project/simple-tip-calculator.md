@@ -1,7 +1,3 @@
-Here’s a small and simple project based on **JavaScript Functions** that students can work on:
-
----
-
 # **Project: Simple Tip Calculator**
 
 ## **Objective:**
