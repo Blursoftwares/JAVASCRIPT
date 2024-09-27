@@ -63,33 +63,33 @@ The quiz game will present users with multiple-choice questions, allowing them t
 ```css
 body {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f9f9f9;
-    font-family: 'Arial', sans-serif;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    height: 100vh; /* Full viewport height */
+    background-color: #f9f9f9; /* Light background color */
+    font-family: 'Arial', sans-serif; /* Font styling */
 }
 
 .quiz-container {
-    width: 80%;
-    max-width: 600px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Responsive width */
+    max-width: 600px; /* Max width for larger screens */
+    background-color: #fff; /* White background for the quiz container */
+    padding: 20px; /* Padding inside the container */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Shadow effect */
 }
 
 button {
-    background-color: #3d66c9;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    cursor: pointer;
+    background-color: #3d66c9; /* Button color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners for button */
+    padding: 10px 15px; /* Padding inside button */
+    cursor: pointer; /* Pointer cursor on hover */
 }
 
 button:hover {
-    background-color: #2a4f9a;
+    background-color: #2a4f9a; /* Darker button color on hover */
 }
 ```
 
@@ -99,76 +99,84 @@ button:hover {
 ### Example Code for `script.js`
 
 ```javascript
+// Array of questions for the quiz
 const questions = [
     {
-        question: "What is the capital of France?",
-        answers: ["Berlin", "Madrid", "Paris", "Lisbon"],
-        correct: 2
+        question: "What is the capital of France?", // Question text
+        answers: ["Berlin", "Madrid", "Paris", "Lisbon"], // Possible answers
+        correct: 2 // Index of the correct answer
     },
     {
         question: "Which planet is known as the Red Planet?",
         answers: ["Earth", "Mars", "Jupiter", "Venus"],
-        correct: 1
+        correct: 1 // Index of the correct answer
     },
     {
         question: "What is the largest ocean on Earth?",
         answers: ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"],
-        correct: 3
+        correct: 3 // Index of the correct answer
     }
 ];
 
-let currentQuestionIndex = 0;
-let score = 0;
+let currentQuestionIndex = 0; // Keep track of the current question
+let score = 0; // User's score
 
+// Get references to HTML elements
 const questionContainer = document.getElementById('question-container');
 const answersContainer = document.getElementById('answers-container');
 const nextButton = document.getElementById('next-button');
 const scoreContainer = document.getElementById('score-container');
 const scoreElement = document.getElementById('score');
 
+// Function to start the quiz
 function startQuiz() {
-    currentQuestionIndex = 0;
-    score = 0;
-    nextButton.classList.add('hide');
-    showQuestion(questions[currentQuestionIndex]);
+    currentQuestionIndex = 0; // Reset question index
+    score = 0; // Reset score
+    nextButton.classList.add('hide'); // Hide next button initially
+    showQuestion(questions[currentQuestionIndex]); // Show the first question
 }
 
+// Function to display a question
 function showQuestion(question) {
-    questionContainer.textContent = question.question;
-    answersContainer.innerHTML = '';
+    questionContainer.textContent = question.question; // Set question text
+    answersContainer.innerHTML = ''; // Clear previous answers
     question.answers.forEach((answer, index) => {
-        const button = document.createElement('button');
-        button.textContent = answer;
-        button.onclick = () => selectAnswer(index);
-        answersContainer.appendChild(button);
+        const button = document.createElement('button'); // Create answer button
+        button.textContent = answer; // Set button text
+        button.onclick = () => selectAnswer(index); // Attach click event
+        answersContainer.appendChild(button); // Add button to answers container
     });
 }
 
+// Function to handle answer selection
 function selectAnswer(selectedIndex) {
-    const question = questions[currentQuestionIndex];
-    if (selectedIndex === question.correct) {
-        score++;
+    const question = questions[currentQuestionIndex]; // Get current question
+    if (selectedIndex === question.correct) { // Check if answer is correct
+        score++; // Increment score for correct answer
     }
-    nextButton.classList.remove('hide');
+    nextButton.classList.remove('hide'); // Show next button
 }
 
+// Event listener for the next button
 nextButton.addEventListener('click', () => {
-    currentQuestionIndex++;
+    currentQuestionIndex++; // Move to the next question
     if (currentQuestionIndex < questions.length) {
-        showQuestion(questions[currentQuestionIndex]);
-        nextButton.classList.add('hide');
+        showQuestion(questions[currentQuestionIndex]); // Show next question
+        nextButton.classList.add('hide'); // Hide next button again
     } else {
-        showScore();
+        showScore(); // All questions answered, show score
     }
 });
 
+// Function to display the user's score
 function showScore() {
-    questionContainer.classList.add('hide');
+    questionContainer.classList.add('hide'); // Hide question and answers
     answersContainer.classList.add('hide');
-    scoreContainer.style.display = 'block';
-    scoreElement.textContent = score;
+    scoreContainer.style.display = 'block'; // Show score container
+    scoreElement.textContent = score; // Display score
 }
 
+// Start the quiz when the script loads
 startQuiz();
 ```
 
@@ -185,4 +193,6 @@ startQuiz();
 Congratulations on building your quiz game! This project has introduced you to important programming concepts such as arrays, functions, and event handling in JavaScript. You can extend this project by adding more questions, categories, or even a timer for each question to increase the challenge!
 ```
 
-Feel free to modify this README to include additional features or instructions that suit your project's requirements!
+### Changes Made:
+- Added comments to the JavaScript code to clarify the purpose of variables and functions, as well as the steps being taken within the code. 
+- Comments help explain the flow of the application, making it easier for students to understand the logic and functionality.
