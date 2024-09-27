@@ -88,21 +88,22 @@ Props are inputs to components. They allow you to pass data from one component t
 Open `src/components/App.js` and add the following code:
 
 ```javascript
-import React from 'react';
-import Header from './Header';
-import Footer from './Footer';
+import React from 'react'; // Import the React library
+import Header from './Header'; // Import the Header component
+import Footer from './Footer'; // Import the Footer component
 
+// Define the main App component
 const App = () => {
     return (
         <div>
-            <Header />
-            <h1>Welcome to My Basic React App</h1>
-            <Footer />
+            <Header /> // Render the Header component
+            <h1>Welcome to My Basic React App</h1> // Main heading for the app
+            <Footer /> // Render the Footer component
         </div>
     );
 }
 
-export default App;
+export default App; // Export the App component for use in other files
 ```
 
 ### Step 4: Create the Header Component
@@ -110,17 +111,18 @@ export default App;
 Open `src/components/Header.js` and add the following code:
 
 ```javascript
-import React from 'react';
+import React from 'react'; // Import the React library
 
+// Define the Header component
 const Header = () => {
     return (
         <header>
-            <h2>My React App</h2>
+            <h2>My React App</h2> // Subheading for the header
         </header>
     );
 }
 
-export default Header;
+export default Header; // Export the Header component for use in other files
 ```
 
 ### Step 5: Create the Footer Component
@@ -128,17 +130,18 @@ export default Header;
 Open `src/components/Footer.js` and add the following code:
 
 ```javascript
-import React from 'react';
+import React from 'react'; // Import the React library
 
+// Define the Footer component
 const Footer = () => {
     return (
         <footer>
-            <p>&copy; 2024 My React App</p>
+            <p>&copy; 2024 My React App</p> // Footer text with copyright symbol
         </footer>
     );
 }
 
-export default Footer;
+export default Footer; // Export the Footer component for use in other files
 ```
 
 ### Step 6: Update the Index File
@@ -146,15 +149,18 @@ export default Footer;
 Open `src/index.js` and ensure it imports the `App` component:
 
 ```javascript
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './components/App';
+import React from 'react'; // Import the React library
+import ReactDOM from 'react-dom/client'; // Import React DOM for rendering
+import './index.css'; // Import CSS file for styling
+import App from './components/App'; // Import the main App component
 
+// Get the root element where the app will be rendered
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+// Render the App component within React Strict Mode
 root.render(
     <React.StrictMode>
-        <App />
+        <App /> // Render the App component
     </React.StrictMode>
 );
 ```
@@ -169,63 +175,64 @@ root.render(
 
 ## Example Code
 
-Here’s a summary of the key files:
+Here’s a summary of the key files with comments:
 
 ### App.js
 
 ```javascript
-import React from 'react';
-import Header from './Header';
-import Footer from './Footer';
+import React from 'react'; // Import the React library
+import Header from './Header'; // Import the Header component
+import Footer from './Footer'; // Import the Footer component
 
+// Define the main App component
 const App = () => {
     return (
         <div>
-            <Header />
-            <h1>Welcome to My Basic React App</h1>
-            <Footer />
+            <Header /> // Render the Header component
+            <h1>Welcome to My Basic React App</h1> // Main heading for the app
+            <Footer /> // Render the Footer component
         </div>
     );
 }
 
-export default App;
+export default App; // Export the App component for use in other files
 ```
 
 ### Header.js
 
 ```javascript
-import React from 'react';
+import React from 'react'; // Import the React library
 
+// Define the Header component
 const Header = () => {
     return (
         <header>
-            <h2>My React App</h2>
+            <h2>My React App</h2> // Subheading for the header
         </header>
     );
 }
 
-export default Header;
+export default Header; // Export the Header component for use in other files
 ```
 
 ### Footer.js
 
 ```javascript
-import React from 'react';
+import React from 'react'; // Import the React library
 
+// Define the Footer component
 const Footer = () => {
     return (
         <footer>
-            <p>&copy; 2024 My React App</p>
+            <p>&copy; 2024 My React App</p> // Footer text with copyright symbol
         </footer>
     );
 }
 
-export default Footer;
+export default Footer; // Export the Footer component for use in other files
 ```
 
 ## Conclusion
 
 Congratulations! You have successfully built a basic React application. You learned how to create components, manage state, and pass props. This foundational knowledge will prepare you for more advanced topics in React, such as state management libraries, routing, and API integration. Continue exploring React to enhance your skills and build more complex applications!
 ```
-
-This README provides a comprehensive guide for students to build a basic React app, including step-by-step instructions, code examples, and a clear structure. If you have any specific adjustments or additional content you'd like to include, feel free to let me know!
