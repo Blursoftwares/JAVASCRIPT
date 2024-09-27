@@ -31,35 +31,45 @@ This quiz is designed to test your understanding of asynchronous programming con
 A) It pauses the execution of the code.  
 B) It executes a function after a specified number of milliseconds.  
 C) It creates an infinite loop.  
-D) It stops all asynchronous tasks.
+D) It stops all asynchronous tasks.  
+
+*Comment: This question tests your understanding of the `setTimeout` function, which is commonly used to delay the execution of code.*
 
 ### Question 2: Which of the following statements about Promises is TRUE?
 
 A) A Promise can be in three states: pending, fulfilled, or rejected.  
 B) A Promise can only be in one state at a time.  
 C) Promises are synchronous operations.  
-D) Both A and B.
+D) Both A and B.  
+
+*Comment: This question assesses your knowledge of how Promises work and their states. Understanding the state of a Promise is crucial for effective error handling and flow control.*
 
 ### Question 3: What does the `async` keyword do in a function declaration?
 
 A) It makes the function return a Promise.  
 B) It makes the function run synchronously.  
 C) It allows the use of `setTimeout` inside the function.  
-D) It can only be used with `await`.
+D) It can only be used with `await`.  
+
+*Comment: This question evaluates your understanding of the `async` keyword, which is essential for working with asynchronous functions and Promises.*
 
 ### Question 4: How do you handle errors in an async function?
 
 A) Use `try` and `catch` blocks.  
 B) Use the `Promise.catch()` method.  
 C) Errors cannot be handled in async functions.  
-D) All of the above.
+D) All of the above.  
+
+*Comment: Error handling is a critical aspect of asynchronous programming. This question checks if you know how to properly catch errors when using async/await syntax.*
 
 ### Question 5: Which of the following correctly demonstrates the use of `await`?
 
 A) `let result = await Promise.resolve(5);`  
 B) `await let result = Promise.resolve(5);`  
 C) `let result = await 5;`  
-D) `await function() {};`
+D) `await function() {};`  
+
+*Comment: This question tests your understanding of the `await` keyword and how to use it correctly to handle Promises in an asynchronous function.*
 
 ## Conclusion
 
