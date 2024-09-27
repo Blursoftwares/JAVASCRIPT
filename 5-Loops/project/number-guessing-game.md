@@ -20,7 +20,7 @@ Create a number guessing game where the computer picks a random number between 1
 
 ---
 
-### **Step-by-Step Instructions:**
+<!-- ### **Step-by-Step Instructions:**
 
 1. **Start with a Random Number:**
    ```javascript
@@ -48,14 +48,14 @@ Create a number guessing game where the computer picks a random number between 1
    alert("Congratulations! You guessed the correct number: " + randomNumber);
    ```
 
----
+--- -->
 
 ### **Bonus Features (Optional):**
 
 - **Add a Limit on Guesses:**
   - Allow the user a maximum of 3 guesses, and if they don’t guess correctly, end the game and reveal the number.
 
-- **Use a `for` Loop to Limit Guesses:**
+<!-- - **Use a `for` Loop to Limit Guesses:**
   ```javascript
   let randomNumber = Math.floor(Math.random() * 10) + 1;
   let guess;
@@ -77,7 +77,7 @@ Create a number guessing game where the computer picks a random number between 1
   }
   ```
 
----
+--- -->
 
 ### **Expected Output:**
 - The program will repeatedly prompt the user to guess a number.

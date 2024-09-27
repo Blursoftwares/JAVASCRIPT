@@ -14,7 +14,7 @@ Create a program that allows users to manage a list of their favorite movies. Us
 
 ---
 
-### **Step-by-Step Instructions:**
+<!-- ### **Step-by-Step Instructions:**
 
 1. **Create an Array:**
 
@@ -91,7 +91,7 @@ for (let i = 0; i < favoriteMovies.length; i++) {
 console.log("\nTotal movies: " + favoriteMovies.length);
 ```
 
----
+--- -->
 
 ### **Bonus Features (Optional):**
 

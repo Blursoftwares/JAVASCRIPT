@@ -13,7 +13,7 @@ Create a function that calculates the tip amount based on the bill total and the
 
 ---
 
-### **Step-by-Step Instructions:**
+<!-- ### **Step-by-Step Instructions:**
 
 1. **Create the Function:**
 
@@ -56,7 +56,7 @@ Create a function that calculates the tip amount based on the bill total and the
    - Use HTML and CSS to create a simple webpage where users can enter the bill amount and tip percentage in input fields instead of using `prompt()`.
    - Display the calculated total on the webpage rather than using an alert.
 
----
+--- -->
 
 ### **Example Output:**
 1. If the user enters a bill amount of `$50` and a tip percentage of `20%`, the function will calculate:

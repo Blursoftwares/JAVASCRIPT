@@ -16,7 +16,7 @@ Create a program that allows users to manage a **profile** object. The profile c
 3. **Use a function** to update and display the profile.
 
 ---
-
+<!-- 
 ### **Step-by-Step Instructions:**
 
 1. **Create the Profile Object:**
@@ -124,7 +124,7 @@ addFavoriteColor("Blue"); // Add favorite color
 displayProfile(); // Display profile with new property
 ```
 
----
+--- -->
 
 ### **Bonus Features (Optional):**
 
