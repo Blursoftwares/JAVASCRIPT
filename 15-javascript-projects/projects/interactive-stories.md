@@ -41,11 +41,12 @@ The interactive story will present a narrative where users can make choices at v
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Container for the story text and choices -->
     <div class="story-container" id="story-container">
-        <p id="story-text"></p>
-        <div id="choices"></div>
+        <p id="story-text"></p> <!-- Placeholder for the story text -->
+        <div id="choices"></div> <!-- Placeholder for choice buttons -->
     </div>
-    <script src="script.js"></script>
+    <script src="script.js"></script> <!-- Link to the JavaScript file -->
 </body>
 </html>
 ```
@@ -57,34 +58,34 @@ The interactive story will present a narrative where users can make choices at v
 
 ```css
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-    font-family: 'Arial', sans-serif;
+    display: flex; /* Use flexbox to center content */
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
+    height: 100vh; /* Full viewport height */
+    background-color: #f0f0f0; /* Light gray background */
+    font-family: 'Arial', sans-serif; /* Font family for the page */
 }
 
 .story-container {
-    width: 60%;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    width: 60%; /* Container width */
+    background-color: #fff; /* White background for the story container */
+    padding: 20px; /* Padding around the content */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
 }
 
 button {
-    background-color: #3d66c9;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    cursor: pointer;
-    margin: 5px;
+    background-color: #3d66c9; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners for buttons */
+    padding: 10px 15px; /* Padding inside buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin: 5px; /* Margin around buttons */
 }
 
 button:hover {
-    background-color: #2a4f9a;
+    background-color: #2a4f9a; /* Darker shade on hover */
 }
 ```
 
@@ -94,9 +95,11 @@ button:hover {
 ### Example Code for `script.js`
 
 ```javascript
+// Get references to DOM elements
 const storyText = document.getElementById('story-text');
 const choicesContainer = document.getElementById('choices');
 
+// Define the story structure using an object
 const story = {
     start: {
         text: "You find yourself in a dark forest. What do you do?",
@@ -114,26 +117,27 @@ const story = {
     },
     village: {
         text: "You are safe, but you wonder what adventures await in the forest.",
-        choices: []
+        choices: [] // No further choices lead to an ending
     },
     fight: {
         text: "You bravely fight the beast and emerge victorious! You are now a hero!",
-        choices: []
+        choices: [] // Ending with no further choices
     }
 };
 
+// Function to display the story and choices
 function showStory(node) {
-    storyText.textContent = node.text;
-    choicesContainer.innerHTML = '';
+    storyText.textContent = node.text; // Update story text
+    choicesContainer.innerHTML = ''; // Clear previous choices
     node.choices.forEach(choice => {
-        const button = document.createElement('button');
-        button.textContent = choice.text;
-        button.onclick = () => showStory(story[choice.next]);
-        choicesContainer.appendChild(button);
+        const button = document.createElement('button'); // Create a new button for each choice
+        button.textContent = choice.text; // Set button text
+        button.onclick = () => showStory(story[choice.next]); // Update story on button click
+        choicesContainer.appendChild(button); // Add button to choices container
     });
 }
 
-// Start the story
+// Start the story by showing the initial node
 showStory(story.start);
 ```
 
