@@ -32,7 +32,9 @@ Understanding the different types of errors is crucial for effective error handl
 
 ### Syntax Errors
 
-Syntax errors occur when the code is incorrectly formatted. These are typically caught during the parsing phase.
+// Syntax errors occur when the code is incorrectly formatted. 
+// These are typically caught during the parsing phase.
+Syntax errors prevent the code from running altogether.
 
 **Example:**
 ```javascript
@@ -41,7 +43,9 @@ console.log("Hello World" // Missing closing parenthesis
 
 ### Runtime Errors
 
-Runtime errors occur during the execution of the code. They can be caused by operations that are not permitted.
+// Runtime errors occur during the execution of the code. 
+// They can be caused by operations that are not permitted, like accessing properties of undefined.
+These errors will stop the code from executing.
 
 **Example:**
 ```javascript
@@ -51,7 +55,9 @@ console.log(a.property); // Trying to access a property of undefined
 
 ### Logical Errors
 
-Logical errors occur when the code executes without any errors but produces incorrect results due to a flaw in logic.
+// Logical errors occur when the code executes without any errors 
+// but produces incorrect results due to a flaw in logic.
+These can be harder to detect since they don't interrupt the execution.
 
 **Example:**
 ```javascript
@@ -63,41 +69,48 @@ console.log(sum(5)); // Missing argument, returns NaN
 
 ### Try-Catch Statement
 
-The `try-catch` statement allows you to handle exceptions gracefully. Code that may throw an error is placed inside the `try` block, while error handling code goes inside the `catch` block.
+// The `try-catch` statement allows you to handle exceptions gracefully.
+// Code that may throw an error is placed inside the `try` block, 
+// while error handling code goes inside the `catch` block.
+This method helps to prevent application crashes.
 
 **Example:**
 ```javascript
 try {
     let result = riskyFunction(); // Function that may throw an error
 } catch (error) {
-    console.error("An error occurred:", error.message);
+    console.error("An error occurred:", error.message); // Log the error message
 }
 ```
 
 ### Throw Statement
 
-You can create custom errors by using the `throw` statement to signal an error condition.
+// You can create custom errors by using the `throw` statement 
+// to signal an error condition. This makes your code more robust.
+This helps you to enforce certain conditions in your functions.
 
 **Example:**
 ```javascript
 function checkAge(age) {
     if (age < 18) {
-        throw new Error("You must be at least 18 years old.");
+        throw new Error("You must be at least 18 years old."); // Throw an error if condition is not met
     }
-    return "Access granted.";
+    return "Access granted."; // Return success message if condition is met
 }
 ```
 
 ### Creating Custom Error Objects
 
-Custom errors can be created by extending the built-in `Error` class for more specific error handling.
+// Custom errors can be created by extending the built-in `Error` class.
+// This allows for more specific error handling in your application.
+Using custom errors can improve clarity when debugging.
 
 **Example:**
 ```javascript
 class CustomError extends Error {
     constructor(message) {
-        super(message);
-        this.name = "CustomError";
+        super(message); // Call the parent constructor
+        this.name = "CustomError"; // Set a custom name for the error
     }
 }
 ```
@@ -115,9 +128,9 @@ class CustomError extends Error {
 ```javascript
 try {
     let num = 10;
-    console.log(num.toUpperCase()); // TypeError
+    console.log(num.toUpperCase()); // TypeError: toUpperCase is not a function for a number
 } catch (error) {
-    console.error("Caught an error:", error.message);
+    console.error("Caught an error:", error.message); // Log the error message
 }
 ```
 
@@ -125,9 +138,9 @@ try {
 
 ```javascript
 try {
-    checkAge(15);
+    checkAge(15); // This will throw an error
 } catch (error) {
-    console.error("Error caught:", error.message);
+    console.error("Error caught:", error.message); // Log the error message
 }
 ```
 
@@ -141,4 +154,6 @@ try {
 Effective error handling is critical in JavaScript development. By understanding the types of errors, using appropriate techniques, and following best practices, you can significantly improve the reliability and user experience of your applications.
 ```
 
-Feel free to edit any parts of the README or ask for further adjustments. If you're ready to move on to the next section or need help with something else, just let me know!
+### Key Points:
+- Comments have been added before each code section and important explanations to provide context and clarify concepts.
+- Feel free to adjust or request more specific comments if needed!
