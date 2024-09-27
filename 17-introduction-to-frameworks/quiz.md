@@ -27,60 +27,60 @@ This quiz is designed to assess your understanding of JavaScript frameworks, inc
 ## Quiz Questions
 
 1. **What is the main purpose of a JavaScript framework?**
-   - A) To provide a predefined structure for building web applications.
-   - B) To enhance the performance of JavaScript code.
-   - C) To serve as a library for writing server-side code.
-   - D) To improve CSS styling.
+   - A) To provide a predefined structure for building web applications.  <!-- Key concept of frameworks -->
+   - B) To enhance the performance of JavaScript code.  <!-- Misleading; frameworks may improve performance but aren't solely for this -->
+   - C) To serve as a library for writing server-side code.  <!-- Incorrect; frameworks are typically client-side -->
+   - D) To improve CSS styling.  <!-- Not the primary purpose of a framework -->
 
 2. **Which of the following is a feature of React?**
-   - A) Two-way data binding.
-   - B) Virtual DOM.
-   - C) Dependency injection.
-   - D) Two-way data binding and dependency injection.
+   - A) Two-way data binding.  <!-- This is more associated with Angular -->
+   - B) Virtual DOM.  <!-- Correct feature of React -->
+   - C) Dependency injection.  <!-- More relevant to Angular -->
+   - D) Two-way data binding and dependency injection.  <!-- Incorrect for React -->
 
 3. **Which framework is known for its opinionated architecture and is suitable for building large applications?**
-   - A) Vue.js
-   - B) Angular
-   - C) React
-   - D) jQuery
+   - A) Vue.js  <!-- More flexible than opinionated -->
+   - B) Angular  <!-- Correct; Angular has a defined structure -->
+   - C) React  <!-- Not opinionated; allows flexibility -->
+   - D) jQuery  <!-- Not a framework; it's a library -->
 
 4. **True or False: Vue.js is primarily designed for building single-page applications (SPAs).**
-   - A) True
-   - B) False
+   - A) True  <!-- Correct; Vue.js excels in SPAs -->
+   - B) False  <!-- Incorrect; Vue.js is often used for SPAs -->
 
 5. **Which of the following is NOT a lifecycle method in React?**
-   - A) componentDidMount
-   - B) componentWillUnmount
-   - C) renderComplete
-   - D) componentDidUpdate
+   - A) componentDidMount  <!-- Correct lifecycle method -->
+   - B) componentWillUnmount  <!-- Correct lifecycle method -->
+   - C) renderComplete  <!-- **Correct answer; not a lifecycle method** -->
+   - D) componentDidUpdate  <!-- Correct lifecycle method -->
 
 6. **What is the primary use of the Angular CLI?**
-   - A) To optimize application performance.
-   - B) To generate and manage Angular projects.
-   - C) To create CSS styles.
-   - D) To manage API requests.
+   - A) To optimize application performance.  <!-- Not the main purpose -->
+   - B) To generate and manage Angular projects.  <!-- Correct; CLI is used for project management -->
+   - C) To create CSS styles.  <!-- Incorrect; not its purpose -->
+   - D) To manage API requests.  <!-- Not primarily for this -->
 
 7. **Which of the following frameworks uses a templating engine?**
-   - A) React
-   - B) Angular
-   - C) Vue.js
-   - D) Both B and C
+   - A) React  <!-- Uses JSX, not a traditional templating engine -->
+   - B) Angular  <!-- Correct; Angular uses a templating engine -->
+   - C) Vue.js  <!-- Also correct; Vue uses a templating engine -->
+   - D) Both B and C  <!-- Correct; both frameworks use templating -->
 
 8. **True or False: React allows developers to create reusable UI components.**
-   - A) True
-   - B) False
+   - A) True  <!-- Correct; one of the main features of React -->
+   - B) False  <!-- Incorrect; React is known for reusability -->
 
 9. **Which JavaScript framework is known for its gentle learning curve?**
-   - A) React
-   - B) Angular
-   - C) Vue.js
-   - D) Ember.js
+   - A) React  <!-- Has a moderate learning curve -->
+   - B) Angular  <!-- Considered complex -->
+   - C) Vue.js  <!-- Correct; known for ease of learning -->
+   - D) Ember.js  <!-- More complex than Vue -->
 
 10. **Which framework primarily focuses on enhancing HTML's capabilities through directives?**
-    - A) React
-    - B) Angular
-    - C) Vue.js
-    - D) Backbone.js
+    - A) React  <!-- Not primarily directive-based -->
+    - B) Angular  <!-- Correct; heavily utilizes directives -->
+    - C) Vue.js  <!-- Uses directives but less emphasis than Angular -->
+    - D) Backbone.js  <!-- Not focused on directives -->
 
 ## Scoring and Feedback
 
