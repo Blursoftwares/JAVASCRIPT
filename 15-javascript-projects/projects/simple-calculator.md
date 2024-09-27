@@ -1,4 +1,4 @@
-Project: Build a Simple Calculator
+# Project: Build a Simple Calculator
 
 ## Overview
 
@@ -125,22 +125,25 @@ button:hover {
 ### Example Code for `script.js`
 
 ```javascript
+// Function to append a value to the calculator display
 function appendToDisplay(value) {
-    const display = document.getElementById('display');
-    display.value += value;
+    const display = document.getElementById('display'); // Get the display element
+    display.value += value; // Append the value to the display
 }
 
+// Function to clear the display
 function clearDisplay() {
-    const display = document.getElementById('display');
-    display.value = '';
+    const display = document.getElementById('display'); // Get the display element
+    display.value = ''; // Clear the display
 }
 
+// Function to calculate the result based on the current display value
 function calculateResult() {
-    const display = document.getElementById('display');
+    const display = document.getElementById('display'); // Get the display element
     try {
-        display.value = eval(display.value);
+        display.value = eval(display.value); // Evaluate the expression in the display
     } catch (error) {
-        display.value = 'Error';
+        display.value = 'Error'; // Show an error message if evaluation fails
     }
 }
 ```
@@ -159,4 +162,4 @@ function calculateResult() {
 Congratulations on building your simple calculator! This project has introduced you to fundamental concepts in programming, including handling user input, performing calculations, and dynamically updating the UI. You can enhance this project further by adding more features such as keyboard support, scientific operations, or memory functions.
 ```
 
-Feel free to adjust the README to fit any additional features or requirements for your calculator project!
+Feel free to modify the README further to include any additional features or instructions you may want to implement in your calculator project!
