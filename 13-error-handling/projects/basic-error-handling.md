@@ -31,11 +31,11 @@ A `try-catch` block allows developers to define a code segment to be tested for 
 ```javascript
 try {
     // Code that may throw an error
-    const result = riskyOperation();
-    console.log(result);
+    const result = riskyOperation(); // Attempt to execute risky operation
+    console.log(result); // If successful, log the result
 } catch (error) {
-    // Handle the error
-    console.error("An error occurred:", error.message);
+    // Handle the error if one occurs
+    console.error("An error occurred:", error.message); // Log error message to console
 }
 ```
 
@@ -47,10 +47,10 @@ The `finally` block can be used to execute code after the `try` and `catch` bloc
 try {
     // Code that may throw an error
 } catch (error) {
-    // Handle the error
+    // Handle the error if one occurs
 } finally {
     // Code that will run regardless of an error
-    console.log("This will always run.");
+    console.log("This will always run."); // This runs whether an error occurred or not
 }
 ```
 
@@ -60,10 +60,11 @@ Providing custom error messages helps in debugging and offers better feedback to
 
 ```javascript
 function divide(a, b) {
+    // Check if the second argument is zero
     if (b === 0) {
-        throw new Error("Division by zero is not allowed.");
+        throw new Error("Division by zero is not allowed."); // Throw a custom error message
     }
-    return a / b;
+    return a / b; // Return the result of the division if no error occurs
 }
 ```
 
@@ -94,19 +95,19 @@ In this project, you will create a simple calculator application that demonstrat
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Calculator</title>
     <style>
-        body { font-family: Arial, sans-serif; }
-        #result { margin-top: 20px; }
-        .error { color: red; }
+        body { font-family: Arial, sans-serif; } // Apply a simple font style
+        #result { margin-top: 20px; } // Space above the result display
+        .error { color: red; } // Style for error messages (red color)
     </style>
 </head>
 <body>
-    <h1>Simple Calculator</h1>
-    <input type="number" id="num1" placeholder="Enter first number">
-    <input type="number" id="num2" placeholder="Enter second number">
-    <button onclick="calculate()">Divide</button>
-    <div id="result"></div>
+    <h1>Simple Calculator</h1> // Main heading
+    <input type="number" id="num1" placeholder="Enter first number"> // Input for first number
+    <input type="number" id="num2" placeholder="Enter second number"> // Input for second number
+    <button onclick="calculate()">Divide</button> // Button to trigger the calculation
+    <div id="result"></div> // Area to display the result or error messages
 
-    <script src="script.js"></script>
+    <script src="script.js"></script> // Link to the JavaScript file
 </body>
 </html>
 ```
@@ -118,25 +119,30 @@ In this project, you will create a simple calculator application that demonstrat
 
 ```javascript
 function calculate() {
+    // Get the input values and parse them to floats
     const num1 = parseFloat(document.getElementById('num1').value);
     const num2 = parseFloat(document.getElementById('num2').value);
-    const resultDiv = document.getElementById('result');
+    const resultDiv = document.getElementById('result'); // Reference to the result display area
 
     try {
-        const result = divide(num1, num2);
-        resultDiv.innerHTML = `Result: ${result}`;
+        // Attempt to perform division
+        const result = divide(num1, num2); // Call the divide function
+        resultDiv.innerHTML = `Result: ${result}`; // Display the result if successful
     } catch (error) {
-        resultDiv.innerHTML = `<span class="error">${error.message}</span>`;
+        // Handle any errors that occur during division
+        resultDiv.innerHTML = `<span class="error">${error.message}</span>`; // Display the error message
     } finally {
-        console.log("Calculation attempted.");
+        console.log("Calculation attempted."); // Log that a calculation was attempted, regardless of success or failure
     }
 }
 
+// Function to perform division
 function divide(a, b) {
+    // Check if the second argument is zero
     if (b === 0) {
-        throw new Error("Division by zero is not allowed.");
+        throw new Error("Division by zero is not allowed."); // Throw a custom error if division by zero is attempted
     }
-    return a / b;
+    return a / b; // Return the result of the division if no error occurs
 }
 ```
 
@@ -152,3 +158,5 @@ Open the `index.html` file in a web browser. Enter two numbers in the input fiel
 ## Conclusion
 
 Understanding and implementing basic error handling techniques is essential for building robust applications. By using try-catch blocks, providing meaningful error messages, and using the `finally` construct, developers can ensure their applications handle errors gracefully and improve the user experience.
+
+---
