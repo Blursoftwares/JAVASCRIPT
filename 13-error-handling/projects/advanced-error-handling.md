@@ -1,4 +1,4 @@
-# Advanced Error Handling Strategies
+### Advanced Error Handling Strategies
 
 ## Overview
 
@@ -65,16 +65,21 @@ In this project, you will create a simple application that demonstrates advanced
 ```javascript
 // errorHandler.js
 
+// Function to log errors to an external service (e.g., Sentry, LogRocket)
 const logErrorToService = (error) => {
     // Here you can log the error to an external logging service
     console.error("Logging error to external service:", error);
 };
 
+// Function to handle errors
 const handleError = (error) => {
+    // Log the error to the external service
     logErrorToService(error);
+    // Display a user-friendly alert
     alert("An unexpected error occurred. Please try again later.");
 };
 
+// Export the handleError function for use in other files
 export default handleError;
 ```
 
@@ -87,29 +92,37 @@ export default handleError;
 import React, { Component } from 'react';
 import handleError from './errorHandler';
 
+// ErrorBoundary component to catch JavaScript errors in child components
 class ErrorBoundary extends Component {
     constructor(props) {
         super(props);
+        // Initialize state to track whether an error has occurred
         this.state = { hasError: false };
     }
 
+    // Lifecycle method to update state when an error is thrown
     static getDerivedStateFromError(error) {
-        return { hasError: true };
+        return { hasError: true }; // Set hasError to true
     }
 
+    // Lifecycle method to log the error when it occurs
     componentDidCatch(error, errorInfo) {
+        // Use the centralized error handler
         handleError(error);
     }
 
     render() {
+        // If an error has occurred, display a fallback UI
         if (this.state.hasError) {
             return <h1>Something went wrong.</h1>;
         }
 
+        // Render the child components if no error occurred
         return this.props.children; 
     }
 }
 
+// Export the ErrorBoundary component for use in other files
 export default ErrorBoundary;
 ```
 
@@ -123,14 +136,17 @@ import React from 'react';
 import ErrorBoundary from './ErrorBoundary';
 import BuggyComponent from './BuggyComponent'; // Assume this component has an error
 
+// Main application component
 function App() {
     return (
+        // Wrap the BuggyComponent with ErrorBoundary
         <ErrorBoundary>
             <BuggyComponent />
         </ErrorBoundary>
     );
 }
 
+// Export the App component for use in the main entry file
 export default App;
 ```
 
@@ -142,11 +158,14 @@ export default App;
 ```javascript
 import React from 'react';
 
+// A simple component that throws an error to test the ErrorBoundary
 function BuggyComponent() {
+    // This line will throw an error when the component renders
     throw new Error("I crashed!");
     return <div>This will never be rendered.</div>;
 }
 
+// Export the BuggyComponent for use in App.js
 export default BuggyComponent;
 ```
 
@@ -163,3 +182,5 @@ When the `BuggyComponent` throws an error, the `ErrorBoundary` will catch it, lo
 ## Conclusion
 
 Advanced error handling is crucial for maintaining the stability and usability of applications. By implementing strategies like error boundaries and centralized error logging, you can ensure that your applications handle errors gracefully, providing a better experience for users and simplifying the debugging process for developers.
+
+---
