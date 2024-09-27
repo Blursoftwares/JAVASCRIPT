@@ -43,16 +43,16 @@ In this project, you will create a simple webpage that fetches and displays rand
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random User Generator</title>
     <style>
-        body { font-family: Arial, sans-serif; }
-        #user { margin-top: 20px; }
+        body { font-family: Arial, sans-serif; } /* Sets font for the body */
+        #user { margin-top: 20px; } /* Adds space above the user display area */
     </style>
 </head>
 <body>
     <h1>Random User Generator</h1>
-    <button id="fetch-user">Fetch Random User</button>
-    <div id="user"></div>
+    <button id="fetch-user">Fetch Random User</button> <!-- Button to fetch user -->
+    <div id="user"></div> <!-- Area to display user info -->
 
-    <script src="script.js"></script>
+    <script src="script.js"></script> <!-- Link to the JavaScript file -->
 </body>
 </html>
 ```
@@ -63,31 +63,35 @@ In this project, you will create a simple webpage that fetches and displays rand
 ### Example Code for `script.js`
 
 ```javascript
+// Add an event listener to the button to trigger the fetch function when clicked
 document.getElementById('fetch-user').addEventListener('click', fetchRandomUser);
 
+// Function to fetch a random user from the API
 function fetchRandomUser() {
-    fetch('https://randomuser.me/api/')
+    fetch('https://randomuser.me/api/') // API endpoint
         .then(response => {
+            // Check if the response is OK (status in the range 200-299)
             if (!response.ok) {
-                throw new Error('Network response was not ok');
+                throw new Error('Network response was not ok'); // Handle response error
             }
-            return response.json();
+            return response.json(); // Parse the response as JSON
         })
         .then(data => {
-            displayUser(data.results[0]);
+            displayUser(data.results[0]); // Pass the first user result to display function
         })
         .catch(error => {
-            console.error('There has been a problem with your fetch operation:', error);
+            console.error('There has been a problem with your fetch operation:', error); // Log errors to the console
         });
 }
 
+// Function to display the user information on the webpage
 function displayUser(user) {
-    const userDiv = document.getElementById('user');
+    const userDiv = document.getElementById('user'); // Select the user display area
     userDiv.innerHTML = `
-        <h2>${user.name.first} ${user.name.last}</h2>
-        <img src="${user.picture.medium}" alt="User Picture">
-        <p>Email: ${user.email}</p>
-        <p>Location: ${user.location.city}, ${user.location.country}</p>
+        <h2>${user.name.first} ${user.name.last}</h2> <!-- Display user name -->
+        <img src="${user.picture.medium}" alt="User Picture"> <!-- Display user picture -->
+        <p>Email: ${user.email}</p> <!-- Display user email -->
+        <p>Location: ${user.location.city}, ${user.location.country}</p> <!-- Display user location -->
     `;
 }
 ```
@@ -106,4 +110,6 @@ Open the `index.html` file in a web browser. Click the "Fetch Random User" butto
 This project demonstrates how to make simple API calls using JavaScript. Understanding how to interact with APIs is crucial for building dynamic web applications that rely on external data sources. Experiment with different APIs to expand your skills further!
 ```
 
-Feel free to adapt this README to better fit your curriculum or add additional details as needed!
+### Key Additions:
+- Comments have been added throughout the HTML and JavaScript code to clarify the purpose of each section and explain the code functionality.
+- Feel free to expand on any sections or modify the comments as needed to fit your teaching style!
