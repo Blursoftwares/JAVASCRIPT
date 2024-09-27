@@ -93,12 +93,13 @@ console.log("Timeout cleared before it could execute.");
 Here’s a simple implementation that changes the text of a button after a delay using `setTimeout`:
 
 ```javascript
-const button = document.getElementById("myButton");
+const button = document.getElementById("myButton"); // Get the button element by its ID
 
+// Set a timeout to execute the following code after 5 seconds (5000 milliseconds)
 setTimeout(() => {
-    button.innerText = "Button has changed!";
-    button.style.backgroundColor = "green"; // Change the button color
-}, 5000); // Change after 5 seconds
+    button.innerText = "Button has changed!"; // Change the button text
+    button.style.backgroundColor = "green"; // Change the button color to green
+}, 5000); // Change happens after 5 seconds
 ```
 
 ### index.html Example
@@ -116,8 +117,8 @@ Make sure your `index.html` includes the following to demonstrate the button cha
 </head>
 <body>
     <h1>setTimeout Button Change</h1>
-    <button id="myButton">Click me!</button>
-    <script src="script.js"></script>
+    <button id="myButton">Click me!</button> <!-- Button element that will change text and color -->
+    <script src="script.js"></script> <!-- Link to the JavaScript file -->
 </body>
 </html>
 ```
@@ -126,5 +127,3 @@ Make sure your `index.html` includes the following to demonstrate the button cha
 
 By completing this project, you have learned how to use `setTimeout` to execute code after a specified delay in JavaScript. This knowledge is essential for creating dynamic web applications that require timed actions, such as delayed notifications or animations. Continue exploring other timer functions like `setInterval` to further enhance your understanding of asynchronous JavaScript!
 ```
-
-This README provides a comprehensive guide for students to understand the `setTimeout` function and its practical applications. If you need further adjustments or additional content, feel free to let me know!
