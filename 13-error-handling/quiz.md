@@ -71,19 +71,24 @@ d) An uncaught error message will be displayed.
 ## Answers
 
 ### Answer 1
-**b)** To manage and respond to errors gracefully
+**b)** To manage and respond to errors gracefully  
+// Error handling is crucial for maintaining application stability and user experience.
 
 ### Answer 2
-**c)** The `catch` block runs if an error occurs in the `try` block.
+**c)** The `catch` block runs if an error occurs in the `try` block.  
+// The `try-catch` structure is fundamental for managing exceptions in JavaScript.
 
 ### Answer 3
-**b)** Syntax Error
+**b)** Syntax Error  
+// Syntax errors occur during the parsing phase and prevent the code from running.
 
 ### Answer 4
-**b)** To execute code that should run regardless of whether an error occurred.
+**b)** To execute code that should run regardless of whether an error occurred.  
+// The `finally` block is used for cleanup activities, ensuring certain code runs.
 
 ### Answer 5
-**d)** An uncaught error message will be displayed.
+**d)** An uncaught error message will be displayed.  
+// If no `catch` block is present, the error will propagate, causing an error message in the console.
 
 ## Conclusion
 
