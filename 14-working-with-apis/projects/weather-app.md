@@ -43,19 +43,19 @@ In this project, you will create a weather app that allows users to input a city
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <style>
-        body { font-family: Arial, sans-serif; }
-        #weather { margin-top: 20px; }
-        #error { color: red; }
+        body { font-family: Arial, sans-serif; } /* Sets the font for the webpage */
+        #weather { margin-top: 20px; } /* Adds space above the weather display */
+        #error { color: red; } /* Sets the error text color to red */
     </style>
 </head>
 <body>
     <h1>Weather App</h1>
-    <input type="text" id="city-input" placeholder="Enter city name">
-    <button id="get-weather">Get Weather</button>
-    <div id="weather"></div>
-    <div id="error"></div>
+    <input type="text" id="city-input" placeholder="Enter city name"> <!-- Input field for city name -->
+    <button id="get-weather">Get Weather</button> <!-- Button to fetch weather data -->
+    <div id="weather"></div> <!-- Container for displaying weather information -->
+    <div id="error"></div> <!-- Container for displaying error messages -->
 
-    <script src="script.js"></script>
+    <script src="script.js"></script> <!-- Link to the JavaScript file -->
 </body>
 </html>
 ```
@@ -66,37 +66,45 @@ In this project, you will create a weather app that allows users to input a city
 ### Example Code for `script.js`
 
 ```javascript
+// Add event listener to the button to trigger the getWeather function when clicked
 document.getElementById('get-weather').addEventListener('click', getWeather);
 
+// Function to fetch weather data based on the city name input
 function getWeather() {
-    const city = document.getElementById('city-input').value;
+    const city = document.getElementById('city-input').value; // Get the city name from the input field
     const apiKey = 'YOUR_API_KEY'; // Replace with your OpenWeatherMap API key
+    // Construct the API URL with the city name and API key
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
+    // Fetch weather data from the OpenWeatherMap API
     fetch(url)
         .then(response => {
+            // Check if the response is not OK (i.e., city not found)
             if (!response.ok) {
-                throw new Error('City not found');
+                throw new Error('City not found'); // Throw an error for invalid city
             }
-            return response.json();
+            return response.json(); // Parse the JSON response
         })
         .then(data => {
-            displayWeather(data);
+            displayWeather(data); // Call function to display weather data
             document.getElementById('error').textContent = ''; // Clear previous errors
         })
         .catch(error => {
-            document.getElementById('error').textContent = error.message;
+            // Handle errors by displaying the error message
+            document.getElementById('error').textContent = error.message; // Show the error message
             document.getElementById('weather').innerHTML = ''; // Clear previous weather data
         });
 }
 
+// Function to display the fetched weather data on the webpage
 function displayWeather(data) {
-    const weatherDiv = document.getElementById('weather');
+    const weatherDiv = document.getElementById('weather'); // Get the weather display container
+    // Create HTML content to display weather information
     weatherDiv.innerHTML = `
-        <h2>Weather in ${data.name}</h2>
-        <p>Temperature: ${data.main.temp} °C</p>
-        <p>Condition: ${data.weather[0].description}</p>
-        <img src="http://openweathermap.org/img/wn/${data.weather[0].icon}.png" alt="Weather Icon">
+        <h2>Weather in ${data.name}</h2> <!-- Display the city name -->
+        <p>Temperature: ${data.main.temp} °C</p> <!-- Display the temperature -->
+        <p>Condition: ${data.weather[0].description}</p> <!-- Display the weather condition -->
+        <img src="http://openweathermap.org/img/wn/${data.weather[0].icon}.png" alt="Weather Icon"> <!-- Display weather icon -->
     `;
 }
 ```
@@ -117,6 +125,5 @@ function displayWeather(data) {
 ## Conclusion
 
 This project demonstrates how to create a simple weather application using an API. It highlights the importance of understanding asynchronous programming and how to handle user inputs in a web application. Feel free to extend the functionality by adding more features, such as a 5-day weather forecast or geolocation support!
-```
 
-Feel free to adapt this README to better fit your curriculum or add additional details as needed!
+---
