@@ -95,18 +95,20 @@ setTimeout(() => {
 Here’s a simple implementation that displays a counter that increments every second using `setInterval`:
 
 ```javascript
-let count = 0;
+let count = 0; // Initialize the counter variable
 
+// Set up an interval that runs every second (1000 milliseconds)
 const counter = setInterval(() => {
-    count++;
+    count++; // Increment the counter by 1
+    // Update the HTML element with the current count value
     document.getElementById("counter").innerText = `Count: ${count}`;
 }, 1000);
 
 // Clear the interval after 10 seconds
 setTimeout(() => {
-    clearInterval(counter);
-    console.log("Counter stopped!");
-}, 10000);
+    clearInterval(counter); // Stop the interval from executing further
+    console.log("Counter stopped!"); // Log a message to the console
+}, 10000); // The interval will be cleared after 10 seconds
 ```
 
 ### index.html Example
@@ -124,8 +126,8 @@ Make sure your `index.html` includes the following to display the counter:
 </head>
 <body>
     <h1>setInterval Counter</h1>
-    <p id="counter">Count: 0</p>
-    <script src="script.js"></script>
+    <p id="counter">Count: 0</p> <!-- This paragraph will display the counter -->
+    <script src="script.js"></script> <!-- Link to the JavaScript file -->
 </body>
 </html>
 ```
@@ -134,5 +136,3 @@ Make sure your `index.html` includes the following to display the counter:
 
 By completing this project, you have learned how to use `setInterval` to execute code at regular intervals in JavaScript. This knowledge is essential for creating dynamic web applications that require repeated actions, such as timers or animations. Continue exploring other timer functions like `setTimeout` to further enhance your understanding of asynchronous JavaScript!
 ```
-
-This README is comprehensive and structured to provide students with a solid understanding of the `setInterval` function and its practical applications. If you need further modifications or additional content, feel free to let me know!
