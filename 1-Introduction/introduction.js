@@ -1,6 +1,7 @@
-<!-- //
-Introduction to JavaScript
-What is JavaScript?
+/*
+<!-- <!-- //
+# **Introduction to JavaScript
+**What is JavaScript?
 JavaScript is a programming language that makes websites interactive, adding fun features like animations, games, and buttons that respond to user actions.
 
 How JavaScript Makes Websites Interactive
@@ -17,7 +18,6 @@ Social Media: For loading new posts without refreshing.
 Shopping Sites: For managing carts and confirming actions.
 Running JavaScript in the Browser
 You can try JavaScript directly in your web browser using the console: -->
-
-//
-
-Type console.log("Hello, World!"); and press Enter to see a message appear in the console. -->
+*/
+// Running Javascript in the console
+console.log('Hello World!');
