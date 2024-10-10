@@ -21,3 +21,5 @@ You can try JavaScript directly in your web browser using the console: -->
 */
 // Running Javascript in the console
 console.log('Hello World!');
+// Doing simple math in the console
+console.log(1 + 1);
