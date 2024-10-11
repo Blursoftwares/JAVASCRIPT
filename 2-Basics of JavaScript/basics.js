@@ -23,30 +23,27 @@ Example 3: Using const for a value that won’t change
 const birthday = "January 1"; // Cannot change this value later
 console.log(birthday);        // Prints "January 1" in the console
 
-2. Data Types
-Data types describe the kinds of values that can be stored in variables.
-/*
-Numbers: Just like in math (e.g., 5, 100, 3.14).
-Example 1: Storing numbers
-*/
+// Data Types - Data types describe the kinds of values that can be stored in variables.
+
+// Numbers: Just like in math (e.g., 5, 100, 3.14).
+
 let Myage = 15;    // A whole number
 let pi = 3.14;   // A decimal number
 console.log(age); // Prints 15 in the console
 console.log(pi);  // Prints 3.14 in the console
 
-Strings: Words or sentences in quotes (e.g., "Hello", "Coding is fun!").
-Example 2: Using strings
 
-javascript
-Copy code
+// Strings: Words or sentences in quotes (e.g., "Hello", "Coding is fun!").
+
 let greeting = "Hello, world!";  // A string (text)
 let favoriteFood = "Pizza";
 console.log(greeting); // Prints "Hello, world!" in the console
 console.log(favoriteFood); // Prints "Pizza"
-Booleans: True or false values (e.g., true, false).
-Example 3: Using booleans in a program
+
+//Booleans: True or false values (e.g., true, false).
 
 let isRaining = false;  // Boolean (true/false)
 let lovesCoding = true;
 console.log(isRaining); // Prints false
 console.log(lovesCoding); // Prints true
+/*
