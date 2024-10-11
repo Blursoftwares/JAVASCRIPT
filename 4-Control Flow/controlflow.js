@@ -38,7 +38,7 @@ if (condition) {
 */
 
 // Example 1: Checking if a person can legally drive
-let age = 16; // Age of the person
+let MyAge = 16; // Age of the person
 if (age >= 18) {
     console.log("You can drive."); // Prints if the person is 18 or older
 } else {
@@ -74,7 +74,7 @@ if (condition1) {
 */
 
 // Example 1: Grading system based on score
-let score = 85; // Storing the score
+let Myscore = 85; // Storing the score
 if (score >= 90) {
     console.log("You got an A!"); // Prints if score is 90 or above
 } else if (score >= 80) {
@@ -96,7 +96,7 @@ if (weather === "sunny") {
 }
 
 // Example 3: Determining the age group
-let age = 10; // Storing the age
+let Myage = 10; // Storing the age
 if (age < 13) {
     console.log("You are a child."); // Prints if the age is less than 13
 } else if (age < 20) {
