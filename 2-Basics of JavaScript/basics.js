@@ -46,4 +46,12 @@ let isRaining = false;  // Boolean (true/false)
 let lovesCoding = true;
 console.log(isRaining); // Prints false
 console.log(lovesCoding); // Prints true
-/*
+
+
+// Null: Represents the intentional absence of any value.
+let car = null;  // No car assigned yet
+console.log(car);  // Prints null
+
+// Undefined: When a variable is declared but not yet assigned a value.
+let color;  // Variable declared but no value assigned
+console.log(color);  // Prints undefined
