@@ -104,3 +104,78 @@ if (age < 13) {
 } else {
     console.log("You are an adult."); // Prints if the age is 20 or above
 }
+/*
+4. `switch` Statement: A way to handle multiple choices based on the value of a variable.
+
+Syntax:
+switch (expression) {
+    case value1:
+        // code to run if expression === value1
+        break;
+    case value2:
+        // code to run if expression === value2
+        break;
+    default:
+        // code to run if none of the cases match
+}
+*/
+
+// Example 1: Evaluating a grade
+let grade = "B"; // Storing a grade
+switch (grade) {
+    case "A":
+        console.log("Excellent!"); // Prints if grade is A
+        break;
+    case "B":
+        console.log("Well done!"); // Prints if grade is B
+        break;
+    case "C":
+        console.log("Good job!"); // Prints if grade is C
+        break;
+    default:
+        console.log("Keep trying!"); // Prints if none of the cases match
+}
+
+// Example 2: Checking the day of the week
+let day = 3; // Storing a number for the day of the week
+switch (day) {
+    case 1:
+        console.log("Monday");
+        break;
+    case 2:
+        console.log("Tuesday");
+        break;
+    case 3:
+        console.log("Wednesday"); // Prints if day is 3
+        break;
+    case 4:
+        console.log("Thursday");
+        break;
+    case 5:
+        console.log("Friday");
+        break;
+    case 6:
+        console.log("Saturday");
+        break;
+    case 7:
+        console.log("Sunday");
+        break;
+    default:
+        console.log("Invalid day!"); // Prints if none of the cases match
+}
+
+// Example 3: Evaluating the type of pet
+let pet = "dog"; // Storing the type of pet
+switch (pet) {
+    case "cat":
+        console.log("You have a cat!"); // Prints if pet is a cat
+        break;
+    case "dog":
+        console.log("You have a dog!"); // Prints if pet is a dog
+        break;
+    case "fish":
+        console.log("You have a fish!"); // Prints if pet is a fish
+        break;
+    default:
+        console.log("Unknown pet!"); // Prints if none of the cases match
+}
